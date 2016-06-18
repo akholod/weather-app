@@ -1,0 +1,79 @@
+@import "http://webfonts.ru/import/comfortaa.css";
+/*Comfortaa, 300, 400, 700*/
+
+/*Meteoicons font*/
+@font-face {
+    font-family: 'MeteoconsRegular';
+    src: url('../font/meteocons-webfont.eot');
+    src: url('../font/meteocons-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/meteocons-webfont.woff') format('woff'),
+    url('../font/meteocons-webfont.ttf') format('truetype'),
+    url('../font/meteocons-webfont.svg#MeteoconsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.icon:before {
+    font-family: 'MeteoconsRegular';
+    content: attr(data-icon);
+    font-size: 10rem;
+    color: #fff;
+}
+.icon {
+    text-decoration: none;
+}
+/*Meteoicons font end*/
+
+/*app*/
+body {
+    font-family: Comfortaa, serif;
+    font-size: 2.5rem;
+    background: #3d4950;
+    color: #fff;
+    text-align: center;
+}
+.container {
+    max-width: 767px;
+    margin: 0 auto;
+}
+.block > div {
+    display: inline-block;
+    margin: 10px 0;
+}
+#humidity {
+    margin-right: 50px;
+    margin-bottom: 5%;
+}
+#weatherApp h3 {
+    font-size: 4rem;
+}
+.location {
+    font-size: 3.5rem;
+    margin: 4%;
+}
+.tempUnit {
+    cursor: pointer;
+    background: transparent;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #b44af7;
+    border: none;
+}
+.tempUnit input{
+    display: none;
+}
+
+/*media queries*/
+@media screen and (max-width: 767px) {
+    #weatherApp h3, .location, #tempUnit {
+        font-size: 2.3rem;
+    }
+    body {
+        font-size: 1.5rem
+    }
+    .icon:before {
+        font-size: 7rem;
+    }
+    .tempUnit {
+        font-size: 2.3rem;
+    }
+}
