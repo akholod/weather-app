@@ -27,6 +27,7 @@ $(function() {
 
             //func get location then if  call func getJSON to API api.openweathermap.org
             function getMyCurrentLocation(func) {
+                getLocationByApi();
                 if (!navigator.geolocation){
                     weather.errorWeather = 'Geolocation is not supported by your browser';
                     getLocationByApi();
