@@ -39,7 +39,7 @@ body {
     display: inline-block;
     margin: 10px 0;
 }
-#humidity {
+.wind-humidity div:first-child {
     margin-right: 50px;
     margin-bottom: 5%;
 }
