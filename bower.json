@@ -1,0 +1,14 @@
+{
+  "name": "weather-app",
+  "description": "A training project for FCC",
+  "version": "0.1.1",
+  "homepage": "https://github.com/akholod/weather-app",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.5.x",
+    "angular-route": "1.5.x",
+    "normalize-css": "^4.2.0",
+    "angular-resource": "^1.5.8"
+  }
+}

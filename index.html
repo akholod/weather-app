@@ -6,34 +6,15 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main-style.css">
 </head>
-<body>
+<body ng-app="weatherApp">
 <div class="container">
     <div id="weatherApp">
-        <h3>Local Weather App</h3>
-        <div class="location block">
-            <div id="city">Locating...</div>
-            <div id="country"></div>
-        </div>
-        <div class="temeruture block">
-            <div id="currentTemp"></div>
-            <label class="tempUnit">
-                <input type="checkbox" id="tempUnit">
-                &deg;<span>C</span>
-            </label>
-        </div>
-        <div class="wind-humidity block">
-            <div id="humidity"></div>
-            <div id="wind"></div>
-        </div>
-        <span class="icon"></span>
-        <div class="weather block">
-            <div id="main"></div>
-            <div id="description"></div>
-        </div>
+        <weather-app ng-cloak></weather-app>
     </div>
 </div>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/main-script.js"></script>
+<script src="js/vendor/angular.min.js"></script>
+<script src="js/vendor/angular-resource.min.js"></script>
+<script src="js/app/app.js"></script>
 </body>
 </html>

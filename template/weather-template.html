@@ -1,0 +1,21 @@
+<h3>Local Weather App</h3>
+<div class="location block">
+    <div>{{mainCtrl.weatherData.name + ' ,'}}</div>
+    <div>{{mainCtrl.weatherData.sys.country}}</div>
+</div>
+<div class="temeruture block">
+    <div>{{'Temperature ' + mainCtrl.temp}}</div>
+    <label class="tempUnit">
+        <input type="checkbox" ng-click="mainCtrl.changeRange()">
+        &deg;<span>{{mainCtrl.tempUnit}}</span>
+    </label>
+</div>
+<div class="wind-humidity block">
+    <div>{{'Humidity ' + mainCtrl.weatherData.main.humidity + '%'}}</div>
+    <div>{{'Wind ' + mainCtrl.weatherData.wind.speed + 'm/s'}}</div>
+</div>
+<span class="icon" data-icon = {{mainCtrl.weatherCode}}></span>
+<div class="weather block">
+    <div>{{mainCtrl.weatherData.weather[0].main + ', '}}</div>
+    <div>{{mainCtrl.weatherData.weather[0].description}}</div>
+</div>
