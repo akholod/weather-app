@@ -6,7 +6,6 @@
 .idea
 *.iml
 bower_components/
-js/vendor/angular.min.js
-js/vendor/angular-resource.min.js
+js/vendor/
 out
 gen
