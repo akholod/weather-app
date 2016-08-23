@@ -34,16 +34,15 @@
                 GetWeatherData.getData(currentPosition.lat, currentPosition.lon)
                     .then((response) => {
                         this.weatherData = response.data;
-                        this.temp = this.weatherData.main.temp;
-                }).then(() => {
+                        this.temp = this.celsius = Math.round(this.weatherData.main.temp * 10) / 10;
+                    }).then(() => {
                     this.weatherCode = chooseMeteoIcon(this.weatherData);
                 });
-        });
+            });
 
         //method change temperature range
         this.changeRange = function(){
-            this.celsius = this.weatherData.main.temp;
-            this.fahrenheit = Math.round(9/5 * this.weatherData.main.temp + 32);
+            this.fahrenheit = Math.round((9/5 * this.weatherData.main.temp + 32) * 10) /10;
 
             if(this.showFahrenheit) {
                 this.temp = this.celsius;
