@@ -35,10 +35,10 @@
                     .then((response) => {
                         this.weatherData = response.data;
                         this.temp = this.celsius = Math.round(this.weatherData.main.temp * 10) / 10;
-                    }).then(() => {
+                }).then(() => {
                     this.weatherCode = chooseMeteoIcon(this.weatherData);
                 });
-            });
+        });
 
         //method change temperature range
         this.changeRange = function(){
